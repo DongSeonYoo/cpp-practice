@@ -1,4 +1,4 @@
-package algorithm;
+package Algorithm;
 
 public class BinarySearch {
         public static int solution(int[] array, int target) {
