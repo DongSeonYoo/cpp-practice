@@ -1,5 +1,7 @@
 package Algorithm;
 
+import java.util.Stack;
+
 public class Palindrome {
 
     public static void palindrome(String str) {             //투포인터 방식
@@ -24,6 +26,7 @@ public class Palindrome {
 
     public static void main(String[] args) {                //테스트코드
         String str = "aaabbaaa";
+        Stack<Integer> stack = new Stack<>();
 
         palindrome(str);
     }
