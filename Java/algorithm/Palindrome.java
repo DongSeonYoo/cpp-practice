@@ -1,4 +1,3 @@
-package Java;
 import java.util.Stack;
 
 public class Palindrome {

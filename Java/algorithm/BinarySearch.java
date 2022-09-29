@@ -1,6 +1,5 @@
-package Java;
-
 public class BinarySearch {
+
         public static int solution(int[] array, int target) {
             int left = 0;                           //배열의 처음 인덱스를 가리킴
             int right = array.length - 1;           //배열의 마지막 인덱스를 가리킴
@@ -28,4 +27,4 @@ public class BinarySearch {
             int t = 9;
             System.out.println("idx번호 : " + solution(arr, t));       //idx번호 : 8
         }
-    }
+}
