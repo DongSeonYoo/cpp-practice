@@ -22,9 +22,9 @@ public class BinarySearch {
             }
             return -1;                              //while을 탈출하고 발견하지 못했을경우 -1반환
         }
-        public static void main(String[] args) {
+        public static void main(String[] args) {                //테스트
             int[] arr = {1,2,3,4,5,6,7,8,9,10};
             int t = 9;
-            System.out.println("idx번호 : " + solution(arr, t));       //idx번호 : 8
+            System.out.println("idx번호 : " + solution(arr, t));
         }
 }
