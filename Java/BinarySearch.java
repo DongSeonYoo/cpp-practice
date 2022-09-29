@@ -1,4 +1,4 @@
-package Algorithm;
+package Java;
 
 public class BinarySearch {
         public static int solution(int[] array, int target) {
