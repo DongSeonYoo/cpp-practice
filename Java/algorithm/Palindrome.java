@@ -1,5 +1,4 @@
 import java.util.Stack;
-
 public class Palindrome {
 
     public static void palindrome(String str) {             //투포인터 방식
