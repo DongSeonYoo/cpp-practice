@@ -1,9 +1,12 @@
 #include <iostream>
+#include <stack>
+
 #define MAX_SIZE 100000
 
 using namespace std;
 
 template <typename T>
+
 
 class Stack {
     private :
@@ -16,14 +19,17 @@ class Stack {
         }
 
         void push(T input) {        //push
-            data[idx + 1] = input;
-            idx++;
+            this->data[this->idx + 1] = input;
+            this->idx++;
         }
 
-        T pop() {                   //pop
-            T result = data[idx];
-            idx--;
-            return result;
+        void pop() {                //pop
+            if(this->empty()) {
+                return;
+            }
+            else {
+                this->idx--;
+            }
         }
 
         int size() {                //size
@@ -31,7 +37,7 @@ class Stack {
         }
 
         bool empty() {              //empty
-            if(this->size == 0) {
+            if(this->size() == 0) {
                 return true;
             }
             else {
@@ -45,4 +51,16 @@ class Stack {
         }
 };
 
+int main() {
+
+
+Stack <int> s;
+
+s.push(1);
+s.pop();
+s.pop();
+s.pop();
+
+s.push(2);
+}
 // 스택의 원소를 모두출력하는 메서드를 만들고싶었는데 그럴거면 스택을쓰는 의미가없구나싶었다 그럴빠엔 vector나 list를 사용하자
