@@ -8,29 +8,29 @@ template <typename T>
 class Stack {
     private :
         T data[MAX_SIZE];
-        int idx;
+        int idx;                    //스택의 인덱스(top을가리킴)
 
-    public :
+    public :                        //생성자
         Stack() {
             idx = -1;
         }
 
-        void push(T input) {
-            data[idx] = input;
+        void push(T input) {        //push
+            data[idx + 1] = input;
             idx++;
         }
 
-        T pop() {
+        T pop() {                   //pop
             T result = data[idx];
             idx--;
             return result;
         }
 
-        int size() {
+        int size() {                //size
             return idx + 1;
         }
 
-        bool empty() {
+        bool empty() {              //empty
             if(this->size == 0) {
                 return true;
             }
@@ -39,16 +39,10 @@ class Stack {
             }
         }
 
-        T top() {
+        T top() {                   //top
             T result = data[idx];
             return result;
         }
 };
 
-int main() {
-
-    Stack<int> s;
-
-    cout << "size : " << s.size() << endl;
-    
-}
+// 스택의 원소를 모두출력하는 메서드를 만들고싶었는데 그럴거면 스택을쓰는 의미가없구나싶었다 그럴빠엔 vector나 list를 사용하자
