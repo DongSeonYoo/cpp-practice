@@ -39,7 +39,7 @@ class Queue {
         }
 
         int size() {
-            return this->tail - this->head;
+            return this->tail - this->head;           //tail - head = size
         }
 
         bool empty() {
