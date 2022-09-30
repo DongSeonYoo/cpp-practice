@@ -50,17 +50,24 @@ class Stack {
             return result;
         }
 };
-
-int main() {
-
-
-Stack <int> s;
-
-s.push(1);
-s.pop();
-s.pop();
-s.pop();
-
-s.push(2);
-}
 // 스택의 원소를 모두출력하는 메서드를 만들고싶었는데 그럴거면 스택을쓰는 의미가없구나싶었다 그럴빠엔 vector나 list를 사용하자
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
