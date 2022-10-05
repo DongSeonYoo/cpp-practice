@@ -6,8 +6,8 @@ using namespace std;
 
 struct node {
     string position;    //직책
-    node* first;        //하위노드에 대한 링크
-    node* second;       //하위노드에 대한 링크
+    node* first;        //첫번째 자식 노드
+    node* second;       //둘번째 자식 노드
 };
 
 struct org_tree {           //새로운 트리를 만드는 정적 함수. 
@@ -27,7 +27,7 @@ struct org_tree {           //새로운 트리를 만드는 정적 함수.
             return root;
         }
                                                                 //만약 루트노드에서 찾지 못했다면.
-        auto firstFound = org_tree::find(root->first, value);   //왼쪽 서브트리에서 다시 찾으려고 시도
+        auto firstFound = org_tree::find(root->first, value);   //왼쪽 서브트리(첫번째 자식)에서 다시 찾으려고 시도
 
         if(firstFound != NULL) {                                //시도
             return firstFound;
@@ -47,14 +47,14 @@ struct org_tree {           //새로운 트리를 만드는 정적 함수.
 
         if(managerNode->first && managerNode->second) {    //만약 상위노드에 first와 second 둘다 존재한다면.
             cout << manager << "아래에 " << subordinate << "를 추가할 수 없습니다." << endl;    //출력 (이진트리는 자식을 두개밖에 가질 수 없음.)
-            return false;   //false 반환
+            return false;                                  //false 반환
         }
 
         if(!managerNode->first) {                                       //만약 첫번째 자식이 비어있으면
-            managerNode->first = new node {subordinate, NULL, NULL};    //첫번째 자식에게 삽입
+            managerNode->first = new node {subordinate, NULL, NULL};    //첫번째 자식에 노드 생성
         }
         else {                                                          //만약 두번째 자식이 비어있으면
-            managerNode->second = new node {subordinate, NULL, NULL};   //두번째 자식에게 삽입
+            managerNode->second = new node {subordinate, NULL, NULL};   //두번째 자식에 노드 생성
         }
         cout << manager << "아래에 " << subordinate << "를 추가했습니다. " << endl;
 
