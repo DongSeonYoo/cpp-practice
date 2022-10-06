@@ -55,7 +55,7 @@ int main() {
         cout << a << " ";
     }
     cout << endl;
-    
+
     quick_sort(v, 0, v.size() - 1);
 
     cout << "after : "; 
