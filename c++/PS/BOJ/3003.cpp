@@ -17,5 +17,5 @@ int main() {
 
     cin >> king >> queen >> rook >> bisop >> knight >> phon;
 
-    cout << 1 - king << " " << 1 - queen << " " << 2 - rook << " " << 2 - bisop << " " << 2 - knight << " " << 8 - phon; 
+    cout << 1 - king << " " << 1 - queen << " " << 2 - rook << " " << 2 - bisop << " " << 2 - knight << " " << 8 - phon;
 }
