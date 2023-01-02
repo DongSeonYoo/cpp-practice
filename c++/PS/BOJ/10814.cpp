@@ -31,6 +31,6 @@ int main() {
     sort(v.begin(), v.end(), comp);
 
     for(auto a : v) {
-        cout << "age : " << a.first << " name : " << a.second << '\n';
+        cout << a.first << " " << a.second << '\n';
     }
 }
