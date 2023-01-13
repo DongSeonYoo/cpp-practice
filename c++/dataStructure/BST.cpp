@@ -157,6 +157,6 @@ int main() {
         cout << "원소 12는 트리에 있습니다." << endl;
     }
     else {
-        cout << "원소 12는 트리에 없습니다." << endl;
+        cout << "원소 12는 트리에 없습니다 yes ." << endl;
     }
 }
