@@ -17,18 +17,18 @@ string solution(vector<string> cards1, vector<string> cards2, vector<string> goa
     int length2 = 0;
     bool flag = true;
 
-    for (int i = 0; i < goal.size(); i++) {     // 1.
-      if (cards1[length1] == goal[i] && length1 < cards1.size()) {
+    for (int i = 0; i < goal.size(); i++) {                                 // 1.
+      if (cards1[length1] == goal[i] && length1 < cards1.size()) {          // 2.
         length1++;
-      } else if (cards2[length2] == goal[i] && length2 < cards2.size()) {
+      } else if (cards2[length2] == goal[i] && length2 < cards2.size()) {   // 3.
         length2++;
-      } else {
+      } else {                                                              // 5.
         flag = false;
         break;
       }
     }
 
-    if (flag) {
+    if (flag) {                                                             // 6.
       answer = "Yes";
     } else {
       answer = "No";
